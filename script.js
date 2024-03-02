@@ -144,3 +144,12 @@ function setWinner(r, c) {
 
   gameOver = true;
 }
+
+window.addEventListener("click", function (e) {
+  if (e.target.classList.contains("tile")) {
+    const dropSound = this.document.querySelector("#dropSound");
+    dropSound.play();
+    dropSound.volume = 0.5;
+    dropSound.loop = false;
+  }
+});
